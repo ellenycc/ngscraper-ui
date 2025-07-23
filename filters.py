@@ -14,24 +14,16 @@ def filter_results(df: pd.DataFrame, search_term: str) -> pd.DataFrame:
     if df.empty:
         return df
 
-    mask = (
-        df["Painting title"].str.contains(search_term, case=False, na=False) | \
-        df["Artist's name"].str.contains(search_term, case=False, na=False) | \
-        df["Inventory number"].str.contains(search_term, case=False, na=False) | \
-        df["Location"].str.contains(search_term, case=False, na=False)
-    )
+    if search_term:
+        mask = (
+            df["Painting title"].str.contains(search_term, case=False, na=False) | \
+            df["Artist's name"].str.contains(search_term, case=False, na=False) | \
+            df["Inventory number"].str.contains(search_term, case=False, na=False) | \
+            df["Location"].str.contains(search_term, case=False, na=False)
+        )
+        filtered_df = df[mask].copy()
+    else:
+        filtered_df = df.copy()
 
-    filtered_df = df[mask] if search_term else df
-
-    # Convert "Last updated" to datetime.date type for proper display/editing
-    if "Last updated" in filtered_df.columns:
-        filtered_df["Last updated"] = pd.to_datetime(filtered_df["Last updated"], errors="coerce").dt.date
-
-    # explicitly convert Notes to string
-    if "Notes" in df.columns:
-        df["Notes"] = df["Notes"].astype(str)
-
-    filtered_df = filtered_df.copy()
     filtered_df.index = filtered_df.index + 1
-
     return filtered_df

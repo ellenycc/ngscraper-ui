@@ -18,11 +18,22 @@ def load_data(original_file: str, updated_file: str) -> pd.DataFrame:
         FileNotFoundError: If neither the updated nor the original file is found.
     """
     if os.path.exists(updated_file):
-        return pd.read_csv(updated_file)
+        df = pd.read_csv(updated_file)
     elif os.path.exists(original_file):
-        return pd.read_csv(original_file)
+        df = pd.read_csv(original_file)
     else:
         raise FileNotFoundError("Neither updated nor original file found.")
+    
+    if "Last updated" in df.columns:
+        df["Last updated"] = pd.to_datetime(
+            df["Last updated"], errors="coerce", dayfirst=True
+    ).dt.date
+
+    if "Notes" in df.columns:
+        df["Notes"] = df["Notes"].fillna("None").astype(str)
+    
+    return df
+
    
 def save_data(df: pd.DataFrame, updated_file: str):
     """

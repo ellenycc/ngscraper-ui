@@ -20,6 +20,8 @@ show_title_and_description()
 with st.spinner("Loading data..."):
     try:
         df = load_data(ORIGINAL_FILE, UPDATED_FILE)
+        if "Notes" in df.columns:
+            df["Notes"] = df["Notes"].astype(str)
     except FileNotFoundError as e:
         st.error(str(e))
         st.stop()  # Stop execution if data file is missing
