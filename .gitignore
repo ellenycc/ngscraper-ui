@@ -1,0 +1,44 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtualenv
+.venv/
+.env
+venv/
+Pipfile.lock
+
+# Streamlit cache & logs
+.streamlit/
+**/.streamlit/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Jupyter and IPython
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Excel & data files (keep out of Git)
+*.xlsx
+*.xls
+*.csv
+
+# Logs and temp
+*.log
+*.tmp
+*.bak
+
+# Python environment
+.mypy_cache/
+.pytest_cache/
+
+# __init__ backups
+*.orig
+
+# Mac finder folder
+.idea/
