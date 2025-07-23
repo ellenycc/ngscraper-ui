@@ -45,23 +45,5 @@ streamlit run app.py
 - Click "Save Changes" to save edits to `data/updated-painting-resolution-list.xlsx`.
 - Click "Reset to Original Data" to discard edits and reload the original file.
 
-## File Structure
-- `app.py` — Main Streamlit app
-- `config.py` — App configuration
-- `constants.py` — Constants (column names, file paths, etc.)
-- `data_handler.py` — Functions for loading and saving data
-- `filters.py` — Filtering logic for search
-- `ui.py` — UI helper functions
-- `data/` — Data files (Excel, CSV, etc.)
-    - `painting-resolution-list.xlsx` — Original data file (not included)
-    - `updated-painting-resolution-list.xlsx` — Saved edits (auto-created)
-- `assets/` — Images, logos, screenshots
-    - `logo.png` — (Optional) App logo
-    - `screenshot.png` — App screenshot for documentation
-- `tests/` — Unit tests (optional)
-- `.streamlit/config.toml` — Custom theme settings
-- `README.md` — Project documentation
-- `Pipfile` / `requirements.txt` — Python dependencies
-
 ## License
 MIT
