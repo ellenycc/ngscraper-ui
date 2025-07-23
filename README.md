@@ -11,7 +11,7 @@ An internal web app for the Digital team to view, search, and update the highest
 
 ## Screenshot
 
-![App Screenshot](assets/Screenshot1.png)
+![App Screenshot](assets/screenshot.png)
 *Example: Main interface with search and editable table.*
 
 ## Requirements

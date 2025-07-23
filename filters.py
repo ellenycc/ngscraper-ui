@@ -27,6 +27,10 @@ def filter_results(df: pd.DataFrame, search_term: str) -> pd.DataFrame:
     if "Last updated" in filtered_df.columns:
         filtered_df["Last updated"] = pd.to_datetime(filtered_df["Last updated"], errors="coerce").dt.date
 
+    # explicitly convert Notes to string
+    if "Notes" in df.columns:
+        df["Notes"] = df["Notes"].astype(str)
+
     filtered_df = filtered_df.copy()
     filtered_df.index = filtered_df.index + 1
 
