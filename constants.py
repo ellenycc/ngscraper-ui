@@ -10,6 +10,6 @@ EDITABLE_COLUMNS = [
     "Notes"
 ]
 
-ORIGINAL_FILE = os.path.join(DATA_DIR, "painting-resolution-list.xlsx")
-UPDATED_FILE = os.path.join(DATA_DIR, "updated-painting-resolution-list.xlsx")
+ORIGINAL_FILE = os.path.join(DATA_DIR, "painting-resolution-list.csv")
+UPDATED_FILE = os.path.join(DATA_DIR, "updated-painting-resolution-list.csv")
 THUMBNAIL_URL = "Thumbnail URL"

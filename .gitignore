@@ -23,7 +23,7 @@ Thumbs.db
 # VS Code
 .vscode/
 
-# Excel & data files (keep out of Git)
+# csv & data files (keep out of Git)
 
 # Logs and temp
 *.log

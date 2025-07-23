@@ -3,10 +3,10 @@
 An internal web app for the Digital team to view, search, and update the highest pixel dimensions for paintings in the collection. Built with Streamlit, it provides a fast, user-friendly interface for managing and editing painting metadata.
 
 ## Features
-- View a table of paintings from an Excel file
+- View a table of paintings from an csv file
 - Search paintings by title, artist, inventory number, or location
 - Edit only specific columns (Pixel dimensions W x H, File format, Last updated)
-- Save changes to a new Excel file
+- Save changes to a new csv file
 - Reset to the original data at any time
 
 ## Screenshot
@@ -31,8 +31,8 @@ An internal web app for the Digital team to view, search, and update the highest
      pipenv install
      pipenv shell
      ```
-3. **Add your Excel data file**
-   - Place `painting-resolution-list.xlsx` in the `data/` directory.
+3. **Add your csv data file**
+   - Place `painting-resolution-list.csv` in the `data/` directory.
 
 ## Usage
 Run the app with:
@@ -42,7 +42,7 @@ streamlit run app.py
 
 - Use the search box to filter paintings.
 - Edit allowed columns directly in the table.
-- Click "Save Changes" to save edits to `data/updated-painting-resolution-list.xlsx`.
+- Click "Save Changes" to save edits to `data/updated-painting-resolution-list.csv`.
 - Click "Reset to Original Data" to discard edits and reload the original file.
 
 ## License
