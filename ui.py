@@ -60,4 +60,8 @@ def show_editable_table(df: pd.DataFrame, column_config: dict):
     Returns:
         pd.DataFrame: The edited DataFrame as returned by st.data_editor.
     """
-    return st.data_editor(df, column_config=column_config, use_container_width=True)
+    return st.data_editor(
+                          df, 
+                          column_config=column_config, 
+                          use_container_width=True,
+                          hide_index=True)

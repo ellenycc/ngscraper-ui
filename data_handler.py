@@ -30,7 +30,7 @@ def load_data(original_file: str, updated_file: str) -> pd.DataFrame:
     ).dt.date
         
     if "Notes" in df.columns:
-        df["Notes"] = df["Notes"].fillna("None").astype(str)
+        df["Notes"] = df["Notes"].fillna("").astype(str)
     
     return df
 
