@@ -28,9 +28,6 @@ def load_data(original_file: str, updated_file: str) -> pd.DataFrame:
         df["Last updated"] = pd.to_datetime(
             df["Last updated"], errors="coerce", dayfirst=True
     ).dt.date
-
-    if "Notes" in df.columns:
-        df["Notes"] = df["Notes"].fillna("None").astype(str)
     
     return df
 
