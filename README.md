@@ -30,9 +30,8 @@ An internal web app for the Digital team to view, search, and update the highest
      ```bash
      pipenv install
      pipenv shell
+     pipenv install streamlit pandas
      ```
-3. **Add your csv data file**
-   - Place `painting-resolution-list.csv` in the `data/` directory.
 
 ## Usage
 Run the app with:
